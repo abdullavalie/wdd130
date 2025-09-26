@@ -29,45 +29,57 @@
   /* — Shadows — */
   --shadow-default: 0 0 30px var(--color-gray);
 }
-nav {background-color: darkblue; padding: 10px;} 
 
-nav a {color: white; display: block; padding: 20px;}
+nav {
+  background-color: var(--color-primary);
+  padding: var(--space-base);
+}
 
-h1 {color: darkblue}
+nav a {
+  color: var(--color-white);
+  display: block;
+  padding: var(--space-nav-link);
+}
+
+h1 {
+  color: var(--color-primary);
+}
 
 main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-    }
+  width: var(--main-img-width);
+  height: auto;
+  border: var(--border-thin-solid-secondary);
+  padding: var(--space-small);
+  box-shadow: var(--shadow-default);
+}
 
-p {padding: 0;}
+p {
+  padding: 0;
+}
 
-main{
-    max-width: 840px;
+main {
+  max-width: var(--main-max-width);
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2); /* 1️⃣ */
-    padding: 10px;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+  width: var(--aside-width);
+  margin: var(--space-margin-aside);
+  border: var(--border-semi-black-20);
+  padding: var(--space-base);
+  background-color: var(--color-light-bg);
+  color: var(--color-dark-text);
+  text-align: center;
 }
 
 aside img {
-    max-width: 200px;
-    height: auto;
+  max-width: var(--aside-img-max-width);
+  height: auto;
 }
 
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+  margin-top: 15px; /* you could make this a variable if you see it reused */
+  border-top: var(--border-thin-solid-black);
+  text-align: center;
 }
 
