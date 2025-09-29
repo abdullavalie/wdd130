@@ -1,102 +1,148 @@
 :root {
-    --primary-color: #fff;
-    --secondary-color: #0e1612;
-    --accent1-color: #b89b61;
-    --accent2-color: #d32f2f;
-    --heading-font: 'Georgia, serif';
-    --body-font: 'Arial, sans-serif';
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+  --primary-color: #fff;
+  --secondary-color: #010a06;
+  --accent1-color: #b89b61;
+  --accent2-color: #d32f2f;
+  --heading-font: Georgia, serif;
+  --body-font: Arial, sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--secondary-color);
 }
 
 header, main, footer {
-    width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem; /* small padding so content isn’t too tight */
 }
 
 h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    text-align: center;
-    margin: 16px 0; 
-    padding: 8px;
-    background-color: var(--secondary-color);
+  font-family: var(--heading-font);
+  color: var(--accent1-color);
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
 }
 
 nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-    line-height: 1.6;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  line-height: 1.6;
 }
 
 .socialmedia a {
-    text-decoration: none;
-    
+  text-decoration: none;
 }
 
 .socialmedia img {
-    width: 32px;
-    height: auto;
-    margin: 0 8px;
+  width: 32px;
+  height: auto;
+  margin: 0 8px;
 }
 
+/* === Hero section === */
 .hero {
-    position: relative;
-    text-align: center;
+  position: relative;   /* allows positioning inside relative to this */
+  width: 100%;
+  min-height: 300px;     /* at least this tall, can grow if content requires */
+  background: url('your-hero-image.jpg') center/cover no-repeat;
+  background-color: var(--secondary-color); /* fallback color */
+  overflow: hidden; /* ensures child elements don’t overflow the hero area visually */
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* Dark overlay so text is easier to read */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* 40% black overlay */
+  z-index: 0;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff
+/* Heading over the image */
+.hero h1 {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: calc(100% - 2rem);
+  padding: 0.75rem 1rem;
+  background-color: rgba(184, 155, 97, 0.8);  /* using accent1 color, slightly transparent */
+  color: #fff;
+  /* you can adjust font size here if needed */
 }
 
-.hero article img{
-    float: right;
-    width: 100px;
-    border: 15px;
-    margin: 0 0 8px 8px;
-    border-radius: 1%;
-    box-shadow: #fff;
-}
-
+/* The article box over the image */
 .hero article {
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
-    padding: 16px;
-    text-align: center;
-    opacity: 0.9;
-    margin: 16px;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9); /* mostly white, slightly transparent */
+  color: var(--accent1-color);
+  padding: 1rem;
+  
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; /* space between image & text */
+  
+  max-height: 40vh; /* doesn’t get overly tall */
+  overflow-y: auto;  /* scroll if content height exceeds this */
 }
 
+/* Inside the article: image + text */
+.hero article img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0; /* prevent image from shrinking too much */
+  border: 2px solid var(--accent2-color);
+  border-radius: 4px;
+}
+
+.hero article .text {
+  flex: 1; /* text takes up remaining space */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 640px) {
+  .hero {
+    min-height: 200px;
+  }
+  
+  .hero h1 {
+    font-size: 1.25rem;
+    top: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .hero article {
+    flex-direction: column; /* stack the image above text instead of side-by-side */
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  
+  .hero article img {
+    width: 80px;
+    margin-bottom: 0.5rem;
+  }
+}
 
 .logo {
-    width: 150px;
-    height: auto;
+  max-width: 150px;
+  height: auto;
 }
+
 
