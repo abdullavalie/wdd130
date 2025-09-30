@@ -3,7 +3,7 @@
   --secondary-color: #010a06;
   --accent1-color: #b89b61;
   --accent2-color: #e98a8a;
-  --heading-font: Georgia, serif;
+  --heading-font: "Times New Roman", "Georgia" serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -94,7 +94,6 @@ article {
   padding: 12px;  
   top: 60%;
   opacity: 0.8;
-  padding: px;
   text-align: left;
   z-index: 1;  /* places article above the overlay */
   font-size: 15px;
