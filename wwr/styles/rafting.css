@@ -1,10 +1,15 @@
 :root {
-  --primary-color: #fff;
+  --primary-color: #5e7b9e;
   --secondary-color: #010a06;
   --accent1-color: #b89b61;
-  --accent2-color: #d32f2f;
+  --accent2-color: #e98a8a;
   --heading-font: Georgia, serif;
-  --body-font: Arial, sans-serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
 }
 
 * {
@@ -15,29 +20,27 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--accent1-color);
-  background-color: var(--secondary-color);
+  color: var(--accent1-color)
 }
 
+
 header, main, footer {
-  max-width: 800px;
+  width: 800px;
   margin: 0 auto;
-  padding: 0 1rem; /* small padding so content isn’t too tight */
+
 }
+
 
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--accent1-color);
   text-align: center;
-  margin: 1rem 0;
-  padding: 0.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 nav, p, section, article {
-  margin: 1rem 0;
-  padding: 0.5rem;
-  line-height: 1.6;
+  margin: 16px;
+  padding: 8px;
 }
 
 .socialmedia a {
@@ -53,11 +56,7 @@ nav, p, section, article {
 /* === Hero section === */
 .hero {
   position: relative;   /* allows positioning inside relative to this */
-  width: 100%;
-  min-height: 300px;     /* at least this tall, can grow if content requires */
-  background: url('your-hero-image.jpg') center/cover no-repeat;
-  background-color: var(--secondary-color); /* fallback color */
-  overflow: hidden; /* ensures child elements don’t overflow the hero area visually */
+
 }
 
 /* Dark overlay so text is easier to read */
@@ -69,80 +68,53 @@ nav, p, section, article {
   z-index: 0;
 }
 
-/* Heading over the image */
-.hero h1 {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: calc(100% - 2rem);
-  padding: 0.75rem 1rem;
-  background-color: rgba(184, 155, 97, 0.8);  /* using accent1 color, slightly transparent */
-  color: #fff;
-  /* you can adjust font size here if needed */
-}
-
-/* The article box over the image */
-.hero article {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  right: 2rem;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.9); /* mostly white, slightly transparent */
-  color: var(--accent1-color);
-  padding: 1rem;
-  
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem; /* space between image & text */
-  
-  max-height: 40vh; /* doesn’t get overly tall */
-  overflow-y: auto;  /* scroll if content height exceeds this */
-}
-
-/* Inside the article: image + text */
-.hero article img {
-  width: 100px;
+.hero img {
+  width: 100%;
   height: auto;
-  flex-shrink: 0; /* prevent image from shrinking too much */
-  border: 2px solid var(--accent2-color);
-  border-radius: 4px;
+  display: block;  /* removes small gap below image */
+}
+h1{
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  padding: 1px;
+  text-align: center;
+  opacity: 0.6;
+  background-color: var(--accent1-color);
+  color: #fff
 }
 
-.hero article .text {
-  flex: 1; /* text takes up remaining space */
+article {
+  position: absolute;
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 12px;  
+  top: 60%;
+  opacity: 0.8;
+  padding: px;
+  text-align: left;
+  z-index: 1;  /* places article above the overlay */
+  font-size: 15px;
+  padding-inline: 20px;
 }
 
-/* Adjust layout for smaller screens */
-@media (max-width: 640px) {
-  .hero {
-    min-height: 200px;
-  }
-  
-  .hero h1 {
-    font-size: 1.25rem;
-    top: 1rem;
-    padding: 0.5rem;
-  }
-  
-  .hero article {
-    flex-direction: column; /* stack the image above text instead of side-by-side */
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-  }
-  
-  .hero article img {
-    width: 80px;
-    margin-bottom: 0.5rem;
-  }
+
+.hero article img {
+  float: right;
+  width: 105px;
+  border: 0.9px solid var(--primary-color);
+  margin: 0 auto;
+  border-radius: 5px;
 }
+
 
 .logo {
   max-width: 150px;
   height: auto;
 }
+
 
 
