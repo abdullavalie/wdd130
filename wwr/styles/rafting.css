@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #5e7b9e;
+  --primary-color: #d8e2ef;
   --secondary-color: #010a06;
   --accent1-color: #b89b61;
   --accent2-color: #e98a8a;
@@ -93,11 +93,12 @@ article {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 12px;  
   top: 60%;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: left;
   z-index: 1;  /* places article above the overlay */
   font-size: 15px;
   padding-inline: 20px;
+  color: #fff;
 }
 
 
