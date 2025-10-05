@@ -17,12 +17,26 @@ body {
     background-color: #ddd;
     color: #000;
 }
-nav {background-color: rgb(60, 60, 91); padding: 10px;} 
+nav {background-color: rgb(60, 60, 91);
+     padding: 10px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+    } 
+ 
+nav a {color: white;
+     display: block;
+     padding: 0.5rem;
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: 700;
+    }
 
-nav a {color: white; display: block; padding: 20px;}
-
-h1 {color: steelblue;
-padding: .5rem;}
+h1 {
+    color: steelblue;
+    padding: .5rem;
+    border-bottom: 2px solid steelblue;
+}
 
 main img {
     width: 150px;
@@ -38,14 +52,23 @@ main img {
 p {padding: 0;
 margin: 1rem;}
 
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
 main{
-    max-width: 840px;
+   grid-column: 2/3;
+   margin: 1rem;
 }
 
 aside {
     width: 20rem;
     text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
@@ -67,4 +90,9 @@ aside h2 {
 /* class selection */
 .indent {
     padding: 1rem;
+}
+
+.grid, header, footer {
+   max-width: 840px;
+   margin: 0 auto;
 }
