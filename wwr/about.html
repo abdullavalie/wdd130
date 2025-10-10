@@ -15,56 +15,86 @@
 
 <body>
     <header>
-        <!-- The rafting site logo -->
-        <img src="images/wwrimage.png" alt="White Water Rafting Logo" class="logo">
-
-        <!-- Main site navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <div class="logo-container">
+                <img src="images/wwrimage.png" alt="White Water Rafting Logo" class="logo">
+            </div>
+            <!-- Main site navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <div class="hero">
             <img src="images/raftingheroimage.jpg" alt="Rafting on wild river">
-            <h1>White Water Rafting Company</h1>
+            <h1 class="hero-title">White Water Rafting Company</h1>
 
-            <article>
+            <article class="hero-blurb">
                 <img src="images/happy-client.jpg" alt="Happy rafting client">
                 <p>We are dedicated to providing thrilling river adventures, connecting people with nature, and ensuring
                     safety and unforgettable memories for all participants.</p>
             </article>
         </div>
 
-        <section>
+        <section class="history-section">
             <h2>History</h2>
-            <p>Since our founding, we have run hundreds of river trips, nurtured a passionate community of adventurers,
-                and continuously invested in safety and environmental stewardship.</p>
+            <div class="history-content">
+                <p>Since our founding, we have run hundreds of river trips, nurtured a passionate community of
+                    adventurers,
+                    and continuously invested in safety and environmental stewardship.</p>
+                <img src="images/rafting-history.jpg" alt="Historic rafting trip">
+            </div>
         </section>
 
-        <section>
+        <section class="adventures-section">
             <h2>Adventure Awaits You!</h2>
+            <div class="adventures-gallery">
+                <figure>
+                    <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure2.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure4.jpg" alt="Rapid X">
+                    <figcaption>Rapid X</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure5.jpg" alt="Secret Canyon">
+                    <figcaption>Secret Canyon</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 💧White Water Rafting💧 — Abdul Amara Lavalie</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://www.linkedin.com/in/abdul-lavalie-18a1ba229/">
-                <img src="images/linkedin.svg" alt="LinkedIn Icon">
-            </a>
-            <a href="https://www.instagram.com/iamlava_1/">
-                <img src="images/instagram.svg" alt="Instagram Icon">
-            </a>
-        </nav>
+        <div class="footer-inner">
+            <p>© 2025 💧White Water Rafting💧 — Abdul Amara Lavalie</p>
+            <nav class="socialmedia">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.svg" alt="Facebook Icon">
+                </a>
+                <a href="https://www.linkedin.com/in/abdul-lavalie-18a1ba229/">
+                    <img src="images/linkedin.svg" alt="LinkedIn Icon">
+                </a>
+                <a href="https://www.instagram.com/iamlava_1/">
+                    <img src="images/instagram.svg" alt="Instagram Icon">
+                </a>
+            </nav>
+        </div>
     </footer>
 </body>
 
